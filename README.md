@@ -1,1 +1,1 @@
-NYUC OSC practice
+NYCU OSC practice
