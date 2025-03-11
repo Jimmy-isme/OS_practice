@@ -15,11 +15,11 @@ $(BUILD_DIR):
 
 # 編譯 .c 檔案，輸出到 build/
 build/%.o: %.c | $(BUILD_DIR)
-	aarch64-linux-gnu-gcc $(CFLAGS) -c $< -o $@
+	aarch64-linux-gnu-gcc -g $(CFLAGS) -c $< -o $@
 
 # 編譯 .S 檔案，輸出到 build/
 build/%.o: %.S | $(BUILD_DIR)
-	aarch64-linux-gnu-gcc $(CFLAGS) -c $< -o $@
+	aarch64-linux-gnu-gcc -g $(CFLAGS) -c $< -o $@
 
 # 連結所有 .o 檔案，產生 kernel8.img
 bootloader.img: $(OBJS_S) $(OBJS_C)
